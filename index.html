@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cronômetro de Cubo Mágico</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="container">
+    <div id="timer">
+      <span id="main-time">0.0</span>
+      <span id="milliseconds">0</span>
+    </div>
+    <div id="status">Segure a barra de espaço para iniciar</div>
+  </div>
+
+  <!-- Menu de Configurações -->
+  <div id="settings-menu" class="hidden">
+    <h2>Configurações</h2>
+    <label>
+      <input type="checkbox" id="toggle-milliseconds" checked>
+      Exibir milissegundos
+    </label>
+    <label>
+      Tempo para segurar (segundos):
+      <input type="number" id="hold-time" value="1" min="0.1" step="0.1">
+    </label>
+    <label>
+      Mensagem abaixo do cronômetro:
+      <input type="text" id="custom-message" value="Segure a barra de espaço para iniciar">
+    </label>
+    <label>
+      Mensagem durante o cronômetro:
+      <input type="text" id="running-message" value="Cronômetro rodando...">
+    </label>
+    <button id="close-menu">Fechar</button>
+  </div>
+
+  <script src="settings.js"></script>
+  <script src="cronometro.js"></script>
+</body>
+</html>
